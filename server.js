@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const randomWords = require("random-words");
 
 const client = new discord.Client();
-client.login("NzA5NjI5OTQyNzQwMDI1Mzc0.Xrosxg.mPDIXAxFMBZVU7jylHMBEsjL8rM");
+client.login("discordtoken");
 client.on("message", message => {
   if (message.content.startsWith("+gmail")) {
     try {
