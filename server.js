@@ -1,8 +1,11 @@
+const token = "discordtoken"
+//===============================
+//imports
 const discord = require("discord.js");
 const randomWords = require("random-words");
 
 const client = new discord.Client();
-client.login("discordtoken");
+client.login(token);
 client.on("message", message => {
   if (message.content.startsWith("+gmail")) {
     try {
