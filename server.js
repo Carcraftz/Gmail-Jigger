@@ -30,7 +30,8 @@ client.on("message", message => {
               .join("");
              //technically multiple dots works but some providers dont let you use multiple dots so here's a quick check so that we only add a dot once
             let sent = false;
-            for (let i = 0; i < meat.length; i++) {
+            //TODO: Find a better way to place dots bc the current method is very biased towards the beginning of the email
+            for (let i = 1; i < meat.length; i++) {
             //flip a coin chance, place a dot (or not)
               if (Math.random() >= 0.5 && !sent) {
                 meat =
