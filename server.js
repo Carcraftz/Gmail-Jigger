@@ -59,7 +59,7 @@ client.on("message", message => {
           )
           .join("");
         let sent = false
-        for (let i = 0; i < meat.length; i++) {
+        for (let i = 1; i < meat.length; i++) {
           if (Math.random() >= 0.5 && !sent) {
             meat = meat.substring(0, i) + "." + meat.substring(i, meat.length);
             sent = true;
