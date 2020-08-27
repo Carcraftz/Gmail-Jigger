@@ -13,6 +13,10 @@ client.on("message", message => {
       let entries = message.content.split(" ")[2];
       //if a specific number of emails to generate is specefied
       if (entries) {
+        //prevent someone crashing us by just generating like a billion emails or something
+        if(entries > 100000){
+          entries = 100000
+        }
         var fs = require("fs");
         let randword = randomWords()
         var stream = fs.createWriteStream("emails"+randword+".txt");
