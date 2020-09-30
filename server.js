@@ -6,6 +6,10 @@ const randomWords = require("random-words");
 
 const client = new discord.Client();
 client.login(token);
+//add notifications once client is ready - change this to client.once for discord.js v12
+client.on("ready",ready =>{
+console.log("Gmail Jigger is ready to rumble!")
+})
 client.on("message", message => {
   if (message.content.startsWith("+gmail")) {
     try {
